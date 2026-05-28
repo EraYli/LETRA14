@@ -48,6 +48,7 @@ export default function JuegoLetras() {
   const [letrasAprendidas, setLetrasAprendidas] = useState<string[]>([]);
   const [score, setScore] = useState(0);
   const [moduloId, setModuloId] = useState<string | null>(null);
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
 
   useEffect(() => {
     if (!user) return;
@@ -76,30 +77,63 @@ export default function JuegoLetras() {
     fetchProgreso();
   }, [user]);
 
-  const hablar = (texto: string) => {
-    const rv = (window as any).responsiveVoice;
-    if (rv && rv.voiceSupport()) {
-      rv.cancel();
-      rv.speak(texto, "Spanish Latin American Female", { rate: 0.9, pitch: 1.1 });
-    } else {
-      window.speechSynthesis?.cancel();
-      const u = new SpeechSynthesisUtterance(texto);
-      u.lang = "es-MX";
-      u.rate = 0.9;
-      u.pitch = 1.1;
-      window.speechSynthesis?.speak(u);
-    }
+  const hablar = (texto: string): Promise<void> => {
+    return new Promise((resolve) => {
+      // Timeout de seguridad por si falla la API de voz
+      const safetyTimeout = setTimeout(() => {
+        resolve();
+      }, 2500);
+
+      const finish = () => {
+        clearTimeout(safetyTimeout);
+        resolve();
+      };
+
+      const rv = (window as any).responsiveVoice;
+      if (rv && rv.voiceSupport()) {
+        rv.cancel();
+        rv.speak(texto, "Spanish Latin American Female", { 
+          rate: 0.9, 
+          pitch: 1.1,
+          onend: finish,
+          onerror: finish
+        });
+      } else {
+        window.speechSynthesis?.cancel();
+        const u = new SpeechSynthesisUtterance(texto);
+        u.lang = "es-MX";
+        u.rate = 0.9;
+        u.pitch = 1.1;
+        u.onend = finish;
+        u.onerror = finish;
+        window.speechSynthesis?.speak(u);
+      }
+    });
   };
 
-  const handleLetterClick = (letra: LetraData) => {
+  const handleLetterClick = async (letra: LetraData) => {
+    if (isAudioPlaying || selectedLetter?.letter === letra.letter) return;
+    
+    setIsAudioPlaying(true);
+    // Ocultar tarjeta actual si existe para dar paso a la nueva
+    setSelectedLetter(null);
+    setSelectedPalabra(null);
+    
+    // Esperar a que se escuche el sonido de la letra
+    await hablar(letra.letter);
+    
+    // Aparecer la tarjeta después del sonido
     setSelectedLetter(letra);
     setSelectedPalabra(letra.palabras[0]);
-    setTimeout(() => { hablar(letra.letter); }, 800);
+    setIsAudioPlaying(false);
   };
 
-  const handlePalabraClick = (palabra: { word: string; image: string }) => {
+  const handlePalabraClick = async (palabra: { word: string; image: string }) => {
+    if (isAudioPlaying || selectedPalabra?.word === palabra.word) return;
+    setIsAudioPlaying(true);
     setSelectedPalabra(palabra);
-    hablar(palabra.word);
+    await hablar(palabra.word);
+    setIsAudioPlaying(false);
   };
 
   const handleLetraAprendida = async () => {
@@ -252,15 +286,16 @@ export default function JuegoLetras() {
                   <motion.button
                     key={item.letter}
                     onClick={() => handleLetterClick(item)}
+                    disabled={isAudioPlaying}
                     className={`aspect-square rounded-xl md:rounded-2xl font-['Fredoka_One',cursive] text-[1.2rem] md:text-[1.5rem] transition-all flex items-center justify-center ${
                       selectedLetter?.letter === item.letter
                         ? "bg-[#6B21A8] text-white shadow-lg"
                         : aprendida
                         ? "bg-[#16A34A] text-white"
                         : "bg-[#FAF7F0] text-[#6B21A8] hover:bg-[#e9d5ff]"
-                    }`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    } ${isAudioPlaying ? 'opacity-70 cursor-not-allowed' : ''}`}
+                    whileHover={!isAudioPlaying ? { scale: 1.05 } : {}}
+                    whileTap={!isAudioPlaying ? { scale: 0.95 } : {}}
                   >
                     {item.letter}
                   </motion.button>
@@ -303,12 +338,13 @@ export default function JuegoLetras() {
                       <motion.button
                         key={p.word}
                         onClick={() => handlePalabraClick(p)}
+                        disabled={isAudioPlaying}
                         className={`flex flex-col items-center p-2 rounded-xl transition-all ${
                           selectedPalabra?.word === p.word
                             ? "bg-white/40 scale-105"
                             : "bg-white/15 hover:bg-white/30"
-                        }`}
-                        whileTap={{ scale: 0.95 }}
+                        } ${isAudioPlaying ? 'cursor-not-allowed opacity-80' : ''}`}
+                        whileTap={!isAudioPlaying ? { scale: 0.95 } : {}}
                       >
                         <span className="text-[1.8rem] md:text-[2rem] leading-tight">{p.image}</span>
                         <span className="text-[0.65rem] md:text-[0.7rem] font-bold mt-1 text-center w-full truncate">{p.word}</span>
