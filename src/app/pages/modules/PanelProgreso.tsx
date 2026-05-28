@@ -168,7 +168,7 @@ export default function PanelProgreso() {
 
       {/* Header */}
       <header className="bg-white shadow-[0_2px_12px_rgba(107,33,168,0.10)] px-4 md:px-8 py-3 md:py-4 relative z-10">
-        <div className="max-w-[1200px] mx-auto flex flex-wrap items-center justify-between gap-3">
+        <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
           <Link to={isTutorView ? "/dashboard/tutor" : "/dashboard/nino"} className="flex items-center gap-1.5 md:gap-2 no-underline shrink-0">
             <span className="text-[1.5rem] md:text-[2rem]">🦕</span>
             <span className="font-['Fredoka_One',cursive] text-[1.2rem] md:text-[1.5rem] text-[#6B21A8]">
@@ -177,7 +177,7 @@ export default function PanelProgreso() {
           </Link>
           <Link
             to={isTutorView ? "/dashboard/tutor" : "/dashboard/nino"}
-            className="text-[#6B21A8] font-bold hover:text-[#7C3AED] transition-colors no-underline text-[0.9rem] md:text-[1rem] shrink-0 ml-auto"
+            className="text-[#6B21A8] font-bold hover:text-[#7C3AED] transition-colors no-underline text-[0.9rem] md:text-[1rem] shrink-0 sm:ml-auto mt-1 sm:mt-0"
           >
             ← Volver
           </Link>

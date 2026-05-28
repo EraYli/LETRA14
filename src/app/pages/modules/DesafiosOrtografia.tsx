@@ -494,10 +494,10 @@ export default function DesafiosOrtografia() {
     return (
       <motion.div key={currentQuestion} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
         className="bg-white rounded-[28px] p-8 shadow-[0_8px_30px_rgba(107,33,168,0.15)]">
-        <div className="text-center mb-8">
-          <div className="text-[6rem] mb-4">{q.image}</div>
-          <h2 className="font-['Fredoka_One',cursive] text-[3rem] text-[#6B21A8] mb-2">{q.word}</h2>
-          <p className="text-gray-600 font-semibold text-[1.1rem]">💡 Pista: {q.hint}</p>
+        <div className="text-center mb-6 md:mb-8">
+          <div className="text-[4.5rem] md:text-[6rem] mb-2 md:mb-4">{q.image}</div>
+          <h2 className="font-['Fredoka_One',cursive] text-[2.2rem] md:text-[3rem] text-[#6B21A8] mb-1 md:mb-2 leading-tight">{q.word}</h2>
+          <p className="text-gray-600 font-semibold text-[1rem] md:text-[1.1rem]">💡 Pista: {q.hint}</p>
         </div>
         <div className={`grid grid-cols-3 gap-4 mb-6 ${showResult && !esCorrecta ? "animate-bounce" : ""}`}>
           {opcionesBarajadas.map((option) => {
@@ -505,7 +505,7 @@ export default function DesafiosOrtografia() {
             const isCorrect = option === q.correct;
             return (
               <motion.button key={option} onClick={() => handleAnswerFacil(option)} disabled={showResult}
-                className={`py-8 rounded-2xl font-['Fredoka_One',cursive] text-[3rem] transition-all ${
+                className={`py-6 md:py-8 rounded-2xl font-['Fredoka_One',cursive] text-[2.5rem] md:text-[3rem] transition-all ${
                   showResult && isSelected
                     ? isCorrect ? "bg-[#16A34A] text-white shadow-lg" : "bg-[#EF4444] text-white"
                     : showResult && isCorrect ? "bg-[#16A34A] text-white"
@@ -535,13 +535,13 @@ export default function DesafiosOrtografia() {
     return (
       <motion.div key={currentQuestion} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
         className="bg-white rounded-[28px] p-8 shadow-[0_8px_30px_rgba(107,33,168,0.15)]">
-        <div className="text-center mb-8">
-          <div className="text-[6rem] mb-4">{q.image}</div>
-          <h2 className="font-['Fredoka_One',cursive] text-[2.5rem] text-[#6B21A8] mb-2">
+        <div className="text-center mb-6 md:mb-8">
+          <div className="text-[4.5rem] md:text-[6rem] mb-2 md:mb-4">{q.image}</div>
+          <h2 className="font-['Fredoka_One',cursive] text-[1.8rem] md:text-[2.5rem] text-[#6B21A8] mb-2 leading-tight">
             {renderTemplate(q.template, respuestasMedio)}
           </h2>
-          <p className="text-gray-600 font-semibold text-[1.1rem]">💡 Pista: {q.hint}</p>
-          <p className="text-[#F97316] font-bold mt-1">
+          <p className="text-gray-600 font-semibold text-[1rem] md:text-[1.1rem]">💡 Pista: {q.hint}</p>
+          <p className="text-[#F97316] font-bold mt-1 text-[0.9rem] md:text-[1rem]">
             Completa la letra {huecoActual + 1} de {q.blanks.length}
           </p>
         </div>
@@ -549,7 +549,7 @@ export default function DesafiosOrtografia() {
           {opcionesMedioBarajadas.map((option) => (
             <motion.button key={option} onClick={() => handleAnswerMedio(option)}
               disabled={medioCorrectoParcial || medioError}
-              className={`py-8 rounded-2xl font-['Fredoka_One',cursive] text-[3rem] transition-all ${
+              className={`py-6 md:py-8 rounded-2xl font-['Fredoka_One',cursive] text-[2.5rem] md:text-[3rem] transition-all ${
                 medioCorrectoParcial ? "bg-[#FAF7F0] text-[#6B21A8]"
                 : medioError ? "bg-red-50 text-[#6B21A8]"
                 : "bg-[#FAF7F0] text-[#6B21A8] hover:bg-[#e9d5ff]"
@@ -581,9 +581,9 @@ export default function DesafiosOrtografia() {
     return (
       <motion.div key={currentQuestion} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
         className="bg-white rounded-[28px] p-8 shadow-[0_8px_30px_rgba(107,33,168,0.15)]">
-        <div className="text-center mb-6">
-          <div className="text-[7rem] mb-2">{q.image}</div>
-          <p className="text-gray-500 font-semibold">¿Cómo se llama? Ordena las letras</p>
+        <div className="text-center mb-5 md:mb-6">
+          <div className="text-[5rem] md:text-[7rem] mb-1 md:mb-2">{q.image}</div>
+          <p className="text-gray-500 font-semibold text-[0.95rem] md:text-[1rem]">¿Cómo se llama? Ordena las letras</p>
         </div>
         <div className="flex flex-wrap justify-center gap-2 min-h-[5rem] mb-6 p-4 bg-[#FAF7F0] rounded-2xl border-2 border-dashed border-[#c4b5fd]">
           {letrasColocadas.length === 0 && (
@@ -606,15 +606,15 @@ export default function DesafiosOrtografia() {
             </motion.button>
           ))}
         </div>
-        <div className="flex gap-3 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <motion.button onClick={handleReintentarDificil} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-700 font-['Fredoka_One',cursive] text-[1rem] px-6 py-3 rounded-xl">
+            className="w-full sm:w-auto bg-gray-200 hover:bg-gray-300 text-gray-700 font-['Fredoka_One',cursive] text-[1rem] px-6 py-3 rounded-xl">
             🔄 Limpiar
           </motion.button>
           <motion.button onClick={handleVerificarDificil}
             disabled={formada.length !== q.word.length || dificilResult === "correcto"}
             whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
-            className={`font-['Fredoka_One',cursive] text-[1rem] px-8 py-3 rounded-xl transition-all ${
+            className={`w-full sm:w-auto font-['Fredoka_One',cursive] text-[1rem] px-8 py-3 rounded-xl transition-all ${
               formada.length === q.word.length && dificilResult === "idle"
                 ? "bg-[#6B21A8] hover:bg-[#7C3AED] text-white shadow-lg"
                 : "bg-gray-200 text-gray-400 cursor-not-allowed"
@@ -650,23 +650,25 @@ export default function DesafiosOrtografia() {
     <div className="min-h-screen bg-gradient-to-br from-[#c7f2a4] via-[#bae6fd] to-[#e9d5ff] relative overflow-hidden">
       <DinoLettersBg />
       <header className="bg-white shadow-[0_2px_12px_rgba(107,33,168,0.10)] px-4 md:px-8 py-3 md:py-4 relative z-10">
-        <div className="max-w-[1200px] mx-auto flex flex-wrap items-center justify-between gap-3">
+        <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
           <Link to="/dashboard/nino" className="flex items-center gap-1.5 md:gap-2 no-underline shrink-0">
             <span className="text-[1.5rem] md:text-[2rem]">🦕</span>
             <span className="font-['Fredoka_One',cursive] text-[1.2rem] md:text-[1.5rem] text-[#6B21A8]">
               LETRA<span className="text-[#16A34A]">SAURIO</span>
             </span>
           </Link>
-          <div className="flex items-center gap-2 md:gap-4 ml-auto">
+          <div className="flex items-center justify-between w-full sm:w-auto gap-2 md:gap-4 sm:ml-auto mt-1 sm:mt-0">
             <div className="bg-[#FACC15] px-3 md:px-6 py-1.5 md:py-2 rounded-full shrink-0">
               <span className="font-['Fredoka_One',cursive] text-[0.95rem] md:text-[1.2rem] text-[#3B0764]">⭐ {score} pts</span>
             </div>
-            {vista !== "menu" && (
-              <button onClick={() => setVista("menu")} className="text-[#6B21A8] font-bold hover:text-[#7C3AED] text-[0.85rem] md:text-[1rem] shrink-0">
-                ← Niveles
-              </button>
-            )}
-            <Link to="/dashboard/nino" className="text-[#6B21A8] font-bold hover:text-[#7C3AED] no-underline text-[0.85rem] md:text-[1rem] shrink-0 hidden sm:inline-block">🏠 Inicio</Link>
+            <div className="flex items-center gap-2 md:gap-3">
+              {vista !== "menu" && (
+                <button onClick={() => setVista("menu")} className="text-[#6B21A8] font-bold hover:text-[#7C3AED] text-[0.85rem] md:text-[1rem] shrink-0">
+                  ← Niveles
+                </button>
+              )}
+              <Link to="/dashboard/nino" className="text-[#6B21A8] font-bold hover:text-[#7C3AED] no-underline text-[0.85rem] md:text-[1rem] shrink-0 hidden sm:inline-block">🏠 Inicio</Link>
+            </div>
           </div>
         </div>
       </header>

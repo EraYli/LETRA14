@@ -250,14 +250,14 @@ export default function JuegoLetras() {
 
       {/* Header */}
       <header className="bg-white shadow-[0_2px_12px_rgba(107,33,168,0.10)] px-4 md:px-8 py-3 md:py-4 relative z-10">
-        <div className="max-w-[1200px] mx-auto flex flex-wrap items-center justify-between gap-3">
+        <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
           <Link to="/dashboard/nino" className="flex items-center gap-1.5 md:gap-2 no-underline shrink-0">
             <span className="text-[1.5rem] md:text-[2rem]">🦕</span>
             <span className="font-['Fredoka_One',cursive] text-[1.2rem] md:text-[1.5rem] text-[#6B21A8]">
               LETRA<span className="text-[#16A34A]">SAURIO</span>
             </span>
           </Link>
-          <div className="flex items-center gap-3 md:gap-4 ml-auto">
+          <div className="flex items-center justify-between w-full sm:w-auto gap-3 md:gap-4 sm:ml-auto mt-1 sm:mt-0">
             <div className="bg-[#FACC15] px-4 md:px-6 py-1.5 md:py-2 rounded-full shrink-0">
               <span className="font-['Fredoka_One',cursive] text-[1rem] md:text-[1.2rem] text-[#3B0764]">
                 ⭐ {score} pts
