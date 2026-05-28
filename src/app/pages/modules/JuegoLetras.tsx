@@ -12,33 +12,33 @@ interface LetraData {
 }
 
 const letrasData: LetraData[] = [
-  { letter: "A", sound: "/a/", palabras: [{ word: "Araña", image: "🕷️" }, { word: "Avión", image: "✈️" }, { word: "Árbol", image: "🌳" }, { word: "Abeja", image: "🐝" }, { word: "Agua", image: "💧" }] },
-  { letter: "B", sound: "/b/", palabras: [{ word: "Burro", image: "🫏" }, { word: "Bote", image: "⛵" }, { word: "Boca", image: "👄" }, { word: "Bebé", image: "👶" }, { word: "Ballena", image: "🐋" }] },
-  { letter: "C", sound: "/k/", palabras: [{ word: "Casa", image: "🏠" }, { word: "Carro", image: "🚗" }, { word: "Conejo", image: "🐰" }, { word: "Camello", image: "🐪" }, { word: "Cangrejo", image: "🦀" }] },
-  { letter: "D", sound: "/d/", palabras: [{ word: "Diente", image: "🦷" }, { word: "Delfín", image: "🐬" }, { word: "Dinosaurio", image: "🦕" }, { word: "Dado", image: "🎲" }, { word: "Durazno", image: "🍑" }] },
-  { letter: "E", sound: "/e/", palabras: [{ word: "Elefante", image: "🐘" }, { word: "Estrella", image: "⭐" }, { word: "Escalera", image: "🪜" }, { word: "Escuela", image: "🏫" }, { word: "Espejo", image: "🪞" }] },
-  { letter: "F", sound: "/f/", palabras: [{ word: "Flor", image: "🌸" }, { word: "Fresa", image: "🍓" }, { word: "Foca", image: "🦭" }, { word: "Fuego", image: "🔥" }, { word: "Fantasma", image: "👻" }] },
-  { letter: "G", sound: "/g/", palabras: [{ word: "Gato", image: "🐱" }, { word: "Gallina", image: "🐔" }, { word: "Globo", image: "🎈" }, { word: "Gorila", image: "🦍" }, { word: "Guitarra", image: "🎸" }] },
-  { letter: "H", sound: "", palabras: [{ word: "Helado", image: "🍦" }, { word: "Hormiga", image: "🐜" }, { word: "Hoja", image: "🍃" }, { word: "Huevo", image: "🥚" }, { word: "Hamster", image: "🐹" }] },
-  { letter: "I", sound: "/i/", palabras: [{ word: "Isla", image: "🏝️" }, { word: "Iguana", image: "🦎" }, { word: "Iglú", image: "🏠" }, { word: "Imán", image: "🧲" }, { word: "Insecto", image: "🐛" }] },
-  { letter: "J", sound: "/j/", palabras: [{ word: "Jirafa", image: "🦒" }, { word: "Jaguar", image: "🐆" }, { word: "Jamón", image: "🍖" }, { word: "Jardín", image: "🌻" }, { word: "Jugo", image: "🧃" }] },
-  { letter: "K", sound: "/k/", palabras: [{ word: "Kiwi", image: "🥝" }, { word: "Koala", image: "🐨" }, { word: "Kayak", image: "🛶" }, { word: "Kimono", image: "👘" }, { word: "Karate", image: "🥋" }] },
-  { letter: "L", sound: "/l/", palabras: [{ word: "León", image: "🦁" }, { word: "Luna", image: "🌙" }, { word: "Libro", image: "📚" }, { word: "Llave", image: "🔑" }, { word: "Limón", image: "🍋" }] },
-  { letter: "M", sound: "/m/", palabras: [{ word: "Mariposa", image: "🦋" }, { word: "Mono", image: "🐒" }, { word: "Manzana", image: "🍎" }, { word: "Música", image: "🎵" }, { word: "Montaña", image: "⛰️" }] },
-  { letter: "N", sound: "/n/", palabras: [{ word: "Nube", image: "☁️" }, { word: "Naranja", image: "🍊" }, { word: "Nave", image: "🚀" }, { word: "Niño", image: "🧒" }, { word: "Nido", image: "🪺" }] },
-  { letter: "Ñ", sound: "/ñ/", palabras: [{ word: "Ñoño", image: "😊" }, { word: "Ñame", image: "🌿" }, { word: "Ñandú", image: "🦜" }, { word: "Ñoqui", image: "🍝" }, { word: "Ñu", image: "🐃" }] },
-  { letter: "O", sound: "/o/", palabras: [{ word: "Oso", image: "🐻" }, { word: "Oveja", image: "🐑" }, { word: "Orca", image: "🐋" }, { word: "Ojo", image: "👁️" }, { word: "Oruga", image: "🐛" }] },
-  { letter: "P", sound: "/p/", palabras: [{ word: "Pato", image: "🦆" }, { word: "Perro", image: "🐶" }, { word: "Pingüino", image: "🐧" }, { word: "Pizza", image: "🍕" }, { word: "Pulpo", image: "🐙" }] },
-  { letter: "Q", sound: "/k/", palabras: [{ word: "Queso", image: "🧀" }, { word: "Quetzal", image: "🦜" }, { word: "Queque", image: "🎂" }, { word: "Quilate", image: "💎" }, { word: "Quinua", image: "🌾" }] },
-  { letter: "R", sound: "/r/", palabras: [{ word: "Rana", image: "🐸" }, { word: "Ratón", image: "🐭" }, { word: "Robot", image: "🤖" }, { word: "Rosa", image: "🌹" }, { word: "Rayo", image: "⚡" }] },
-  { letter: "S", sound: "/s/", palabras: [{ word: "Sol", image: "☀️" }, { word: "Serpiente", image: "🐍" }, { word: "Sandía", image: "🍉" }, { word: "Silla", image: "🪑" }, { word: "Sapo", image: "🐸" }] },
-  { letter: "T", sound: "/t/", palabras: [{ word: "Tigre", image: "🐯" }, { word: "Tren", image: "🚂" }, { word: "Tortuga", image: "🐢" }, { word: "Tomate", image: "🍅" }, { word: "Tulipán", image: "🌷" }] },
-  { letter: "U", sound: "/u/", palabras: [{ word: "Uva", image: "🍇" }, { word: "Unicornio", image: "🦄" }, { word: "Urraca", image: "🐦" }, { word: "Uniforme", image: "👕" }, { word: "Urso", image: "🐻" }] },
-  { letter: "V", sound: "/b/", palabras: [{ word: "Vaca", image: "🐄" }, { word: "Volcán", image: "🌋" }, { word: "Violín", image: "🎻" }, { word: "Ventana", image: "🪟" }, { word: "Venado", image: "🦌" }] },
-  { letter: "W", sound: "/w/", palabras: [{ word: "Waffle", image: "🧇" }, { word: "Wifi", image: "📶" }, { word: "Wombat", image: "🐾" }, { word: "Water", image: "💧" }, { word: "Windsurf", image: "🏄" }] },
-  { letter: "X", sound: "/ks/", palabras: [{ word: "Xilófono", image: "🎼" }, { word: "Xenón", image: "✨" }, { word: "Xoloitzcuintle", image: "🐕" }, { word: "Xavier", image: "👦" }, { word: "Xochitl", image: "🌸" }] },
-  { letter: "Y", sound: "/y/", palabras: [{ word: "Yoyo", image: "🪀" }, { word: "Yate", image: "⛵" }, { word: "Yogurt", image: "🥛" }, { word: "Yegua", image: "🐴" }, { word: "Yerba", image: "🌿" }] },
-  { letter: "Z", sound: "/s/", palabras: [{ word: "Zorro", image: "🦊" }, { word: "Zapato", image: "👟" }, { word: "Zebra", image: "🦓" }, { word: "Zanahoria", image: "🥕" }, { word: "Zopilote", image: "🦅" }] },
+  { letter: "A", sound: "/A/", palabras: [{ word: "Araña", image: "🕷️" }, { word: "Avión", image: "✈️" }, { word: "Árbol", image: "🌳" }, { word: "Abeja", image: "🐝" }, { word: "Agua", image: "💧" }] },
+  { letter: "B", sound: "/BE/", palabras: [{ word: "Burro", image: "🫏" }, { word: "Bote", image: "⛵" }, { word: "Boca", image: "👄" }, { word: "Bebé", image: "👶" }, { word: "Ballena", image: "🐋" }] },
+  { letter: "C", sound: "/CE/", palabras: [{ word: "Casa", image: "🏠" }, { word: "Carro", image: "🚗" }, { word: "Conejo", image: "🐰" }, { word: "Camello", image: "🐪" }, { word: "Cangrejo", image: "🦀" }] },
+  { letter: "D", sound: "/DE/", palabras: [{ word: "Diente", image: "🦷" }, { word: "Delfín", image: "🐬" }, { word: "Dinosaurio", image: "🦕" }, { word: "Dado", image: "🎲" }, { word: "Durazno", image: "🍑" }] },
+  { letter: "E", sound: "/E/", palabras: [{ word: "Elefante", image: "🐘" }, { word: "Estrella", image: "⭐" }, { word: "Escalera", image: "🪜" }, { word: "Escuela", image: "🏫" }, { word: "Espejo", image: "🪞" }] },
+  { letter: "F", sound: "/EFE/", palabras: [{ word: "Flor", image: "🌸" }, { word: "Fresa", image: "🍓" }, { word: "Foca", image: "🦭" }, { word: "Fuego", image: "🔥" }, { word: "Fantasma", image: "👻" }] },
+  { letter: "G", sound: "/GE/", palabras: [{ word: "Gato", image: "🐱" }, { word: "Gallina", image: "🐔" }, { word: "Globo", image: "🎈" }, { word: "Gorila", image: "🦍" }, { word: "Guitarra", image: "🎸" }] },
+  { letter: "H", sound: "HACHE", palabras: [{ word: "Helado", image: "🍦" }, { word: "Hormiga", image: "🐜" }, { word: "Hoja", image: "🍃" }, { word: "Huevo", image: "🥚" }, { word: "Hamster", image: "🐹" }] },
+  { letter: "I", sound: "/I/", palabras: [{ word: "Isla", image: "🏝️" }, { word: "Iguana", image: "🦎" }, { word: "Iglú", image: "🏠" }, { word: "Imán", image: "🧲" }, { word: "Insecto", image: "🐛" }] },
+  { letter: "J", sound: "/JOTA/", palabras: [{ word: "Jirafa", image: "🦒" }, { word: "Jaguar", image: "🐆" }, { word: "Jamón", image: "🍖" }, { word: "Jardín", image: "🌻" }, { word: "Jugo", image: "🧃" }] },
+  { letter: "K", sound: "/KA/", palabras: [{ word: "Kiwi", image: "🥝" }, { word: "Koala", image: "🐨" }, { word: "Kayak", image: "🛶" }, { word: "Kimono", image: "👘" }, { word: "Karate", image: "🥋" }] },
+  { letter: "L", sound: "/ELE/", palabras: [{ word: "León", image: "🦁" }, { word: "Luna", image: "🌙" }, { word: "Libro", image: "📚" }, { word: "Llave", image: "🔑" }, { word: "Limón", image: "🍋" }] },
+  { letter: "M", sound: "/EME/", palabras: [{ word: "Mariposa", image: "🦋" }, { word: "Mono", image: "🐒" }, { word: "Manzana", image: "🍎" }, { word: "Música", image: "🎵" }, { word: "Montaña", image: "⛰️" }] },
+  { letter: "N", sound: "/ENE/", palabras: [{ word: "Nube", image: "☁️" }, { word: "Naranja", image: "🍊" }, { word: "Nave", image: "🚀" }, { word: "Niño", image: "🧒" }, { word: "Nido", image: "🪺" }] },
+  { letter: "Ñ", sound: "/EÑE/", palabras: [{ word: "Ñoño", image: "😊" }, { word: "Ñame", image: "🌿" }, { word: "Ñandú", image: "🦜" }, { word: "Ñoqui", image: "🍝" }, { word: "Ñu", image: "🐃" }] },
+  { letter: "O", sound: "/O/", palabras: [{ word: "Oso", image: "🐻" }, { word: "Oveja", image: "🐑" }, { word: "Orca", image: "🐋" }, { word: "Ojo", image: "👁️" }, { word: "Oruga", image: "🐛" }] },
+  { letter: "P", sound: "/PE/", palabras: [{ word: "Pato", image: "🦆" }, { word: "Perro", image: "🐶" }, { word: "Pingüino", image: "🐧" }, { word: "Pizza", image: "🍕" }, { word: "Pulpo", image: "🐙" }] },
+  { letter: "Q", sound: "/CU/", palabras: [{ word: "Queso", image: "🧀" }, { word: "Quetzal", image: "🦜" }, { word: "Queque", image: "🎂" }, { word: "Quilate", image: "💎" }, { word: "Quinua", image: "🌾" }] },
+  { letter: "R", sound: "/ERRE/", palabras: [{ word: "Rana", image: "🐸" }, { word: "Ratón", image: "🐭" }, { word: "Robot", image: "🤖" }, { word: "Rosa", image: "🌹" }, { word: "Rayo", image: "⚡" }] },
+  { letter: "S", sound: "/ESE/", palabras: [{ word: "Sol", image: "☀️" }, { word: "Serpiente", image: "🐍" }, { word: "Sandía", image: "🍉" }, { word: "Silla", image: "🪑" }, { word: "Sapo", image: "🐸" }] },
+  { letter: "T", sound: "/TE/", palabras: [{ word: "Tigre", image: "🐯" }, { word: "Tren", image: "🚂" }, { word: "Tortuga", image: "🐢" }, { word: "Tomate", image: "🍅" }, { word: "Tulipán", image: "🌷" }] },
+  { letter: "U", sound: "/U/", palabras: [{ word: "Uva", image: "🍇" }, { word: "Unicornio", image: "🦄" }, { word: "Urraca", image: "🐦" }, { word: "Uniforme", image: "👕" }, { word: "Urso", image: "🐻" }] },
+  { letter: "V", sound: "/UVE/", palabras: [{ word: "Vaca", image: "🐄" }, { word: "Volcán", image: "🌋" }, { word: "Violín", image: "🎻" }, { word: "Ventana", image: "🪟" }, { word: "Venado", image: "🦌" }] },
+  { letter: "W", sound: "/DOBLE U/", palabras: [{ word: "Waffle", image: "🧇" }, { word: "Wifi", image: "📶" }, { word: "Wombat", image: "🐾" }, { word: "Water", image: "💧" }, { word: "Windsurf", image: "🏄" }] },
+  { letter: "X", sound: "/EQUIS/", palabras: [{ word: "Xilófono", image: "🎼" }, { word: "Xenón", image: "✨" }, { word: "Xoloitzcuintle", image: "🐕" }, { word: "Xavier", image: "👦" }, { word: "Xochitl", image: "🌸" }] },
+  { letter: "Y", sound: "/YE/", palabras: [{ word: "Yoyo", image: "🪀" }, { word: "Yate", image: "⛵" }, { word: "Yogurt", image: "🥛" }, { word: "Yegua", image: "🐴" }, { word: "Yerba", image: "🌿" }] },
+  { letter: "Z", sound: "/ZETA/", palabras: [{ word: "Zorro", image: "🦊" }, { word: "Zapato", image: "👟" }, { word: "Zebra", image: "🦓" }, { word: "Zanahoria", image: "🥕" }, { word: "Zopilote", image: "🦅" }] },
 ];
 
 export default function JuegoLetras() {
@@ -92,8 +92,8 @@ export default function JuegoLetras() {
       const rv = (window as any).responsiveVoice;
       if (rv && rv.voiceSupport()) {
         rv.cancel();
-        rv.speak(texto, "Spanish Latin American Female", { 
-          rate: 0.9, 
+        rv.speak(texto, "Spanish Latin American Female", {
+          rate: 0.9,
           pitch: 1.1,
           onend: finish,
           onerror: finish
@@ -112,24 +112,31 @@ export default function JuegoLetras() {
   };
 
   const handleLetterClick = async (letra: LetraData) => {
-    if (isAudioPlaying || selectedLetter?.letter === letra.letter) return;
-    
+    if (isAudioPlaying) return;
+
     setIsAudioPlaying(true);
-    // Ocultar tarjeta actual si existe para dar paso a la nueva
-    setSelectedLetter(null);
-    setSelectedPalabra(null);
     
-    // Esperar a que se escuche el sonido de la letra
-    await hablar(letra.letter);
+    if (selectedLetter?.letter !== letra.letter) {
+      // Ocultar tarjeta actual si existe para dar paso a la nueva
+      setSelectedLetter(null);
+      setSelectedPalabra(null);
+
+      // Esperar a que se escuche el sonido de la letra
+      await hablar(letra.letter);
+
+      // Aparecer la tarjeta después del sonido
+      setSelectedLetter(letra);
+      setSelectedPalabra(letra.palabras[0]);
+    } else {
+      // Si ya es la letra actual, solo repetimos el sonido
+      await hablar(letra.letter);
+    }
     
-    // Aparecer la tarjeta después del sonido
-    setSelectedLetter(letra);
-    setSelectedPalabra(letra.palabras[0]);
     setIsAudioPlaying(false);
   };
 
   const handlePalabraClick = async (palabra: { word: string; image: string }) => {
-    if (isAudioPlaying || selectedPalabra?.word === palabra.word) return;
+    if (isAudioPlaying) return;
     setIsAudioPlaying(true);
     setSelectedPalabra(palabra);
     await hablar(palabra.word);
@@ -287,13 +294,12 @@ export default function JuegoLetras() {
                     key={item.letter}
                     onClick={() => handleLetterClick(item)}
                     disabled={isAudioPlaying}
-                    className={`aspect-square rounded-xl md:rounded-2xl font-['Fredoka_One',cursive] text-[1.2rem] md:text-[1.5rem] transition-all flex items-center justify-center ${
-                      selectedLetter?.letter === item.letter
-                        ? "bg-[#6B21A8] text-white shadow-lg"
-                        : aprendida
+                    className={`aspect-square rounded-xl md:rounded-2xl font-['Fredoka_One',cursive] text-[1.2rem] md:text-[1.5rem] transition-all flex items-center justify-center ${selectedLetter?.letter === item.letter
+                      ? "bg-[#6B21A8] text-white shadow-lg"
+                      : aprendida
                         ? "bg-[#16A34A] text-white"
                         : "bg-[#FAF7F0] text-[#6B21A8] hover:bg-[#e9d5ff]"
-                    } ${isAudioPlaying ? 'opacity-70 cursor-not-allowed' : ''}`}
+                      } ${isAudioPlaying ? 'opacity-70 cursor-not-allowed' : ''}`}
                     whileHover={!isAudioPlaying ? { scale: 1.05 } : {}}
                     whileTap={!isAudioPlaying ? { scale: 0.95 } : {}}
                   >
@@ -339,11 +345,10 @@ export default function JuegoLetras() {
                         key={p.word}
                         onClick={() => handlePalabraClick(p)}
                         disabled={isAudioPlaying}
-                        className={`flex flex-col items-center p-2 rounded-xl transition-all ${
-                          selectedPalabra?.word === p.word
-                            ? "bg-white/40 scale-105"
-                            : "bg-white/15 hover:bg-white/30"
-                        } ${isAudioPlaying ? 'cursor-not-allowed opacity-80' : ''}`}
+                        className={`flex flex-col items-center p-2 rounded-xl transition-all ${selectedPalabra?.word === p.word
+                          ? "bg-white/40 scale-105"
+                          : "bg-white/15 hover:bg-white/30"
+                          } ${isAudioPlaying ? 'cursor-not-allowed opacity-80' : ''}`}
                         whileTap={!isAudioPlaying ? { scale: 0.95 } : {}}
                       >
                         <span className="text-[1.8rem] md:text-[2rem] leading-tight">{p.image}</span>
@@ -367,11 +372,10 @@ export default function JuegoLetras() {
                     <button
                       onClick={handleLetraAprendida}
                       disabled={yaAprendida}
-                      className={`w-full font-['Fredoka_One',cursive] py-3 rounded-xl transition-all text-[0.95rem] md:text-[1rem] ${
-                        yaAprendida
-                          ? "bg-[#16A34A] text-white cursor-default"
-                          : "bg-[#FACC15] hover:bg-[#FDE68A] text-[#3B0764]"
-                      }`}
+                      className={`w-full font-['Fredoka_One',cursive] py-3 rounded-xl transition-all text-[0.95rem] md:text-[1rem] ${yaAprendida
+                        ? "bg-[#16A34A] text-white cursor-default"
+                        : "bg-[#FACC15] hover:bg-[#FDE68A] text-[#3B0764]"
+                        }`}
                     >
                       {yaAprendida ? "✅ Aprendida" : "✓ Letra aprendida"}
                     </button>
